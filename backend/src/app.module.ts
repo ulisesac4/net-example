@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
+import { StringDecoderModule } from './string-decoder/string-decoder.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { join } from 'path';
         path: join(process.cwd(), 'src/graphql.ts'),
       },
     }),
+    StringDecoderModule,
   ],
   controllers: [AppController],
   providers: [AppService],

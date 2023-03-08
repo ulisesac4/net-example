@@ -1,0 +1,11 @@
+type StringDecoded {
+  result: String!
+}
+
+type Query {
+  example: String
+}
+
+type Mutation {
+  parseString(unparsedString: String!): StringDecoded
+}
