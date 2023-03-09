@@ -49,6 +49,7 @@ export default function Home() {
           </Button>
         </div>
       </main>
+      <div className="overlay" data-loading={loading}></div>
     </>
   );
 }
