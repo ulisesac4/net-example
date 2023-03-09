@@ -18,6 +18,20 @@ header {
   height: 50px;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main {
   min-height: 100vh;
   background-color: #585c65;

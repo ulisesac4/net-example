@@ -61,6 +61,9 @@ export default function Home() {
         }}
         open={isDialogOpen}
       />
+      <footer>
+        <div>Ulises Avila 2023</div>
+      </footer>
     </>
   );
 }
