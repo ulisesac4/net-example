@@ -10,10 +10,12 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import './index.css';
 import { useState } from 'react';
+import ParseStringDialog from '@/components/ParsedStringDialog';
 
 export default function Home() {
   const [unparsedString, setUnparsedString] = useState('');
   const [parseString, { data, loading, error }] = useMutation(ParseString);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
     <>
@@ -43,6 +45,7 @@ export default function Home() {
             style={{ height: '55px' }}
             onClick={() => {
               parseString({ variables: { unparsedString } });
+              setIsDialogOpen(true);
             }}
           >
             Decode
@@ -50,6 +53,14 @@ export default function Home() {
         </div>
       </main>
       <div className="overlay" data-loading={loading}></div>
+      <ParseStringDialog
+        result={data?.parseString?.result || 'n/a'}
+        loading={loading}
+        handleClose={() => {
+          setIsDialogOpen(false);
+        }}
+        open={isDialogOpen}
+      />
     </>
   );
 }
