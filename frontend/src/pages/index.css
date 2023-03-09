@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-bar {
+  height: 50px;
+}
+
+.main {
+  background-color: #585c65;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
