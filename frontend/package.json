@@ -18,9 +18,9 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "postinstall": "husky install",
     "test": "vitest",
-    "test:watch": "vitest watch"
+    "test:watch": "vitest watch",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -32,8 +32,13 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "3.7.10",
+    "@fontsource/roboto": "4.5.8",
+    "@mui/icons-material": "5.11.11",
     "gatsby": "5.7.0",
+    "gatsby-plugin-apollo": "4.0.3",
     "gatsby-plugin-pnpm": "1.2.10",
+    "graphql": "16.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsconfig-paths-webpack-plugin": "4.0.0"
@@ -43,6 +48,8 @@
     "@babel/preset-typescript": "7.21.0",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
+    "@graphql-codegen/cli": "3.2.2",
+    "@graphql-codegen/client-preset": "2.1.1",
     "@testing-library/dom": "9.0.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
