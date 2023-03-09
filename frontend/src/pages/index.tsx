@@ -3,6 +3,7 @@ import { gql, useMutation } from '@apollo/client';
 import ParseString from '@/graphql/ParseString';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -22,7 +23,15 @@ export default function Home() {
     <>
       <Background />
       <header>
-        <div className="top-bar">Tech Challenge</div>
+        <div className="top-bar">
+          <Button
+            variant="outlined"
+            startIcon={<MenuIcon />}
+            style={{ color: 'white', borderColor: 'white' }}
+          >
+            Menu
+          </Button>
+        </div>
       </header>
 
       <main className="main">
