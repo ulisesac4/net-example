@@ -11,6 +11,7 @@ import '@fontsource/roboto/700.css';
 import './index.css';
 import { useState } from 'react';
 import ParseStringDialog from '@/components/ParsedStringDialog';
+import Background from '@/components/Background';
 
 export default function Home() {
   const [unparsedString, setUnparsedString] = useState('');
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <>
+      <Background />
       <header>
         <div className="top-bar">Tech Challenge</div>
       </header>
