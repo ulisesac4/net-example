@@ -33,8 +33,11 @@
   },
   "dependencies": {
     "@apollo/client": "3.7.10",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
     "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.11.11",
+    "@mui/material": "5.11.12",
     "gatsby": "5.7.0",
     "gatsby-plugin-apollo": "4.0.3",
     "gatsby-plugin-pnpm": "1.2.10",
