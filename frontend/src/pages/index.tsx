@@ -78,3 +78,7 @@ export default function Home() {
     </>
   );
 }
+
+export function Head() {
+  return <title>DigitalHype Test</title>;
+}
